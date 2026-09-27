@@ -106,7 +106,7 @@
 }
 
 .call-card {
-  width: min(100%, 430px);
+  width: min(100%, 500px);
   padding: 35px;
   background: var(--white);
   color: var(--black);
@@ -153,13 +153,23 @@
   line-height: 1.5;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 1200px) {
+  .call-card {
+    width: 400px;
+  }
+}
+
+@media (max-width: 780px) {
   .contact__grid {
     grid-template-columns: 1fr;
     align-items: center;
   }
 
-  .contact__action {
-    display: none;
+  .call-card {
+    width: 100%;
+  }
+
+  .call-card h3 {
+    font-size: 18px;
   }
 }

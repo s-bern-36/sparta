@@ -32,6 +32,10 @@ module.exports = {
           from: path.resolve(__dirname, "public/sparta_logo.webp"),
           to: path.resolve(__dirname, "dist"),
         },
+        {
+          from: path.resolve(__dirname, "src/send.php"),
+          to: path.resolve(__dirname, "dist"),
+        },
       ],
     }),
     new MiniCssExtractPlugin(),
