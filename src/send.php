@@ -1,6 +1,7 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Получаем и очищаем данные от спама
+    $name = htmlspecialchars(trim($_POST['name']));
     $phone = htmlspecialchars(trim($_POST['phone']));
 
     if (!empty($phone)) {
@@ -14,6 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <head><title>$subject</title></head>
         <body>
             <h2>Заявка с сайта</h2>
+            <p><strong>Имя:</strong> $name</p>
             <p><strong>Телефон:</strong> $phone</p>
             <p><strong>Дата:</strong> " . date("d.m.Y H:i") . "</p>
         </body>

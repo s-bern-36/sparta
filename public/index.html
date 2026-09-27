@@ -304,16 +304,19 @@
 
               <h3>Оставьте заявку на обратный звонок</h3>
 
-              <form class="callback-form" id="callback-form">
-                <input
-                  type="tel"
-                  name="phone"
-                  placeholder="+7 (___) ___-__-__"
-                  required
-                />
-                <button type="submit" class="button callback-form__button">
-                  Заказать звонок
-                </button>
+              <form id="callback-form">
+                <div class="callback-form">
+                  <input name="name" placeholder="Имя" required />
+                  <input
+                    type="tel"
+                    name="phone"
+                    placeholder="+7 (___) ___-__-__"
+                    required
+                  />
+                  <button type="submit" class="button callback-form__button">
+                    Заказать звонок
+                  </button>
+                </div>
                 <div id="form-result" style="margin-top: 10px"></div>
               </form>
 
