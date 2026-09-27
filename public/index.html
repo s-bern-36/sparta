@@ -353,32 +353,5 @@
         </div>
       </div>
     </footer>
-
-    <script>
-      const menuButton = document.querySelector(".menu-button");
-      const navigation = document.querySelector(".nav");
-
-      if (menuButton && navigation) {
-        menuButton.addEventListener("click", () => {
-          const isOpen = navigation.classList.toggle("nav--open");
-
-          menuButton.classList.toggle("menu-button--open", isOpen);
-          menuButton.setAttribute("aria-expanded", String(isOpen));
-          menuButton.setAttribute(
-            "aria-label",
-            isOpen ? "Закрыть меню" : "Открыть меню",
-          );
-        });
-
-        navigation.querySelectorAll("a").forEach((link) => {
-          link.addEventListener("click", () => {
-            navigation.classList.remove("nav--open");
-            menuButton.classList.remove("menu-button--open");
-            menuButton.setAttribute("aria-expanded", "false");
-            menuButton.setAttribute("aria-label", "Открыть меню");
-          });
-        });
-      }
-    </script>
   </body>
 </html>
