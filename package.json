@@ -1,12 +1,15 @@
 {
   "name": "fc-sparta",
+  "homepage": "https://github.io",
   "version": "1.0.0",
   "description": "Домашнее задание модуля Webpack",
   "main": "index.js",
   "scripts": {
     "start": "npx webpack serve --config webpack.config.dev.js",
     "build": "npx webpack --config webpack.config.prod.js",
-    "build:dev": "npx webpack --config webpack.config.dev.js"
+    "build:dev": "npx webpack --config webpack.config.dev.js",
+    "predeploy": "npm install && npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "author": "Sergey Bernyakovich",
   "license": "ISC",
@@ -17,6 +20,7 @@
     "eslint": "^8.33.0",
     "eslint-webpack-plugin": "^4.0.0",
     "file-loader": "^6.2.0",
+    "gh-pages": "^6.3.0",
     "html-webpack-plugin": "^5.5.0",
     "mini-css-extract-plugin": "^2.7.2",
     "postcss": "^8.4.21",
