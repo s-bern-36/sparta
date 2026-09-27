@@ -1,0 +1,15 @@
+.about {
+  .about__grid,
+  .contact__grid {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  .about__text {
+    padding-top: 20px;
+  }
+
+  .about__text p + p {
+    margin-top: 22px;
+  }
+}
